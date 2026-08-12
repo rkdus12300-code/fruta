@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRUTA</title>
+
+    <!-- 웹폰트 연결 -->
+    <!-- font-family: "Noto Sans KR", sans-serif; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- font-family: "Black Han Sans", sans-serif; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+
+    <!-- font-family: "Bowlby One SC", sans-serif; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style1.css">
+
+    <link rel="icon" href="./images/favicon-32x32.png" type="image/png">
+</head>
+
+<body>
+    <div class="top">
+        <div class="gnb">
+
+            <p class="menu">
+                <button type="button" class="menu-open" aria-label="메뉴 열기">
+                    <img src="./images/menu.png" alt="메뉴">
+                    <span>MENU</span>
+                </button>
+            </p>
+
+            <h1 class="logo">
+                <a href="./index.html">
+                    <img src="./images/logo.svg" alt="logo">
+                </a>
+            </h1>
+
+            <ul class="header-icons">
+                <li>
+                    <a href="#">
+                        <img src="./images/search.png" alt="search">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./images/mypage.png" alt="mypage">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./images/cart.png" alt="cart">
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+
+    <!-- 메뉴 열었을 때 검은 배경 -->
+    <div class="menu-dim"></div>
+
+
+    <!-- 왼쪽 사이드 메뉴 -->
+    <aside class="side-menu" aria-hidden="true">
+
+        <div class="side-menu-head">
+
+            <a href="./index.html" class="side-logo">
+                <img src="./images/logo.svg" alt="FRUTA">
+            </a>
+
+            <button type="button" class="menu-close" aria-label="메뉴 닫기">
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+        <nav class="side-nav">
+            <ul>
+
+                <li>
+                    <a href="./index.html#section1">
+                        <span class="side-number">01</span>
+                        TODAY'S FRUIT
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./index.html#section2">
+                        <span class="side-number">02</span>
+                        ABOUT FRUTA
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./index.html#section3">
+                        <span class="side-number">03</span>
+                        FRUIT PACKS
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./index.html#section4">
+                        <span class="side-number">04</span>
+                        GIFT SET
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./index.html#section6">
+                        <span class="side-number">05</span>
+                        GOODS
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./index.html#section8">
+                        <span class="side-number">06</span>
+                        STORE
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <div class="side-menu-foot">
+
+            <p>FRESH FRUIT, HAPPY DAYS.</p>
+
+            <div class="side-menu-links">
+                <a href="#">INSTAGRAM</a>
+                <a href="#">KAKAOTALK</a>
+            </div>
+
+        </div>
+
+    </aside>
+
+    <!-- 중앙 전체 -->
+    <div class="wrap">
+        <!-- 상품 주문창 -->
+        <div id="product">
+            <div class="img">
+                <img src="./images/product_main.jpg" alt="FRUTA 과일 패키지" class="product-img">
+            </div>
+            <div class="right">
+                <div class="border">
+                    <h1>프루타 과일 패키지 500g</h1>
+                    <!-- <h2>34,000원</h2> -->
+
+                    <p>신선한 과일을 필요한 만큼, 간편하게 즐겨보세요. <br>
+                        프루타가 엄선한 과일을 500g 한 팩에 담았습니다.
+                    </p>
+                </div>
+                <table class="selectbox">
+                    <tr>
+                        <th>제품선택</th>
+                        <td>
+                            <select name="option">
+                                <option value="*">옵션을 선택해 주세요.</option>
+                                <option value="strawberry">딸기</option>
+                                <option value="cherry">체리</option>
+                                <option value="melon">멜론</option>
+                                <option value="shine muscat">샤인머스켓</option>
+                                <option value="mango">망고</option>
+                                <option value="lemon">레몬</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>수량</th>
+                        <td>
+                            <select name="number">
+                                <option value="*">옵션을 선택해 주세요.</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+                <ul class="order">
+                    <li><a href="#">장바구니</a></li>
+                    <li><a href="#">구매하기</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="detail_wrap">
+            <!-- 상세페이지 -->
+            <div class="main">
+                <img src="./images/product01.jpg" alt="page1">
+                <img src="./images/product02.jpg" alt="page2">
+                <img src="./images/product03.jpg" alt="page3">
+                <img src="./images/product04.jpg" alt="page4">
+                <img src="./images/product05.jpg" alt="page5">
+                <img src="./images/product06.jpg" alt="page6">
+            </div>
+
+            <!-- 제품 정보 -->
+            <!-- <div class="info">
+                <h1>제품 세부 정보</h1>
+
+                <h2>진성분</h2>
+                <p>다이메티콘, 다이메티콘/비닐다이메티콘크로스폴리머, 사이클로펜타실록세인, 사이클로헥사실록세인, 향료, 1,2-헥산다이올, 다이메티콘올, 트라이실록세인, 정제수, 로즈힙열매오일,
+                    시트로넬올, 하이드록시시트로넬알, 녹차꽃추출물, 사이클로덱스트린</p>
+
+                <h2>제품 정보</h2>
+                <p>제품명 : 메미니 솔리드 퍼퓸</p>
+                <p>용량 : 30ml / 1.01fl.oz.</p>
+                <p>제품 주요 사양 : 모든 피부</p>
+                <p>화장품 책임판매업자 : (주)일레븐코퍼레이션 / 서울특별시 중구 남대문료 78, 5층(명동1가)</p>
+                <p>화장품 제조업자 : 제품 내 별도표기</p>
+                <p>제조국 : 대한민국</p>
+                <p>제품유지기간 : 개봉일로부터 6개월</p>
+                <p>제조번호 및 사용기한 : 최소 2025년 10월 18일 이후까지인 상품만을 취급</p>
+
+                <h2>사용 방법</h2>
+                <p>취향에 맞게 적당량을 덜어 손목, 쇄골, 목 등 맥박이 뛰는 부위에 발라주세요.</p>
+                <p>* 캡 오픈 시 내용물이 흘러나올 수 있으니 유의하세요.</p>
+                <p>* 튜브 개봉 시 동봉된 핀을 사용해 주세요. 핀이 날카로우므로 주의하여 개봉해 주세요.</p>
+                <p>용기 특성상 내용물이 흘러나올 수 있습니다.</p>
+
+                <h2>사용할 때의 주의사항</h2>
+                <ol>
+                    <li>화장품 사용 시 또는 사용 후 직사광선에 의하여 사용부위가 붉은 반점, 부어오름 또는 가려움증 등의 이상 증상이나 부작용이 있는 경우에는 전문의 등과 상담할 것</li>
+                    <li>상처가 있는 부위 등에는 사용을 자제할 것</li>
+                    <li>보관 및 취급 시 주의사항
+                        <ol class="ol_in">
+                            <li>어린이의 손이 닿지 않는 곳에 보관할 것</li>
+                            <li>직사광선을 피해서 보관할 것</li>
+                        </ol>
+                    </li>
+                </ol>
+            </div> -->
+        </div>
+    </div>
+
+    <!-- 푸터 -->
+    <footer id="footer">
+        <div class="footer-inner">
+
+            <!-- PC / 태블릿 왼쪽 로고 -->
+            <div class="footer-logo footer-logo-pc">
+                <a href="#">
+                    <img src="./images/logo.svg" alt="로고">
+                </a>
+            </div>
+
+            <!-- 오른쪽 정보 영역 -->
+            <div class="footer-content">
+
+                <ul class="footer-menu">
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">이용안내</a></li>
+                </ul>
+
+                <div class="footer-bottom">
+                    <div class="footer-info">
+                        <p>(주)프루타</p>
+                        <p>대표: 김가연</p>
+                        <p>주소: 부산광역시 수영구</p>
+                        <p>사업자등록번호: 111-11-11111</p>
+                        <p>통신판매업신고: 제 2026-부산수영구-1111호</p>
+                        <p>대표번호: 1111-1111</p>
+                        <p>이메일: info@fruta.com</p>
+                        <p>개인정보보호관리 책임자: 김가연</p>
+                    </div>
+
+                    <!-- 모바일에서 보이는 로고와 SNS -->
+                    <div class="footer-mobile-side">
+                        <div class="footer-logo footer-logo-mobile">
+                            <a href="#">
+                                <img src="./images/logo.svg" alt="로고">
+                            </a>
+                        </div>
+
+                        <ul class="footer-sns">
+                            <li>
+                                <a href="#">
+                                    <img src="./images/kakao.png" alt="카카오톡">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./images/instagram.png" alt="인스타그램">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./images/youtube.png" alt="유튜브">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./images/facebook.png" alt="페이스북">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="checker-strip"></div>
+    </footer>
+
+    <!-- 탑버튼 -->
+    <a href="#" class="top_btn">
+        <img src="./images/top_btn.svg" alt="탑 버튼">
+    </a>
+
+
+    <script src="./js/script1.js"></script>
+
+</body>
+
+</html>

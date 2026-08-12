@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRUTA</title>
+
+    <!-- 웹폰트 연결 -->
+    <!-- font-family: "Bowlby One SC", sans-serif; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
+
+    <!-- font-family: "Black Han Sans", sans-serif; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+
+    <!-- font-family: "Noto Sans KR", sans-serif; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+
+    <!-- 외부 css 연결 -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- 파비콘 연결 -->
+    <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="top">
+            <div class="gnb">
+                <p class="menu">
+                    <button type="button" class="menu-open" aria-label="메뉴 열기">
+                        <img src="./images/menu.png" alt="메뉴">
+                        <span>MENU</span>
+                    </button>
+                </p>
+
+                <h1 class="logo">
+                    <a href="#">
+                        <img src="./images/logo.svg" alt="logo">
+                    </a>
+                </h1>
+
+                <ul class="header-icons">
+                    <li><a href="#">
+                            <img src="./images/search.png" alt="search">
+                        </a></li>
+                    <li><a href="#">
+                            <img src="./images/mypage.png" alt="mypage">
+                        </a></li>
+                    <li><a href="#">
+                            <img src="./images/cart.png" alt="cart">
+                        </a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 메뉴를 열었을 때 나타나는 검은 배경 -->
+        <div class="menu-dim"></div>
+
+        <!-- 왼쪽 사이드 메뉴 -->
+        <aside class="side-menu" aria-hidden="true">
+            <div class="side-menu-head">
+                <a href="#" class="side-logo">
+                    <img src="./images/logo.svg" alt="FRUTA">
+                </a>
+
+                <button type="button" class="menu-close" aria-label="메뉴 닫기">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <nav class="side-nav">
+                <ul>
+                    <li>
+                        <a href="#section1">
+                            <span class="side-number">01</span>
+                            TODAY'S FRUIT
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#section2">
+                            <span class="side-number">02</span>
+                            ABOUT FRUTA
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#section3">
+                            <span class="side-number">03</span>
+                            FRUIT PACKS
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#section4">
+                            <span class="side-number">04</span>
+                            GIFT SET
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#section6">
+                            <span class="side-number">05</span>
+                            GOODS
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#section8">
+                            <span class="side-number">06</span>
+                            STORE
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="side-menu-foot">
+                <p>FRESH FRUIT, HAPPY DAYS.</p>
+
+                <div class="side-menu-links">
+                    <a href="#">INSTAGRAM</a>
+                    <a href="#">KAKAOTALK</a>
+                </div>
+            </div>
+        </aside>
+
+        <div id="visual">
+
+            <div class="main_banner">
+
+                <video id="mainVideo" src="./videos/fruta_main_banner.mp4" autoplay muted loop playsinline>
+                </video>
+
+                <button class="sound-btn" aria-label="사운드 ON/OFF">
+                    <img id="soundIcon" src="./images/sound_off.png" alt="사운드">
+                </button>
+
+            </div>
+
+            <div class="checker-strip"></div>
+
+        </div>
+
+
+        <div id="section1">
+
+            <!-- 배경 outline 텍스트 (FRUTA / FRUITS) -->
+            <div class="bg-text" aria-hidden="true">
+                <span class="outline-word outline-word--top">FRUTA</span>
+                <span class="outline-word outline-word--bottom">FRUITS</span>
+            </div>
+
+            <h1 class="section-title">오늘의 과일</h1>
+
+            <ul class="fruit">
+                <li>
+                    <a href="#section1">
+                        <img src="./images/strawberry.png" alt="strawberry" class="fruit-icon">
+                        <span class="fruit-hover">
+                            <img src="./images/strawberry_hover.jpg" alt="딸기 호버">
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#section1">
+                        <img src="./images/lemon.png" alt="lemon" class="fruit-icon">
+                        <span class="fruit-hover">
+                            <img src="./images/lemon_hover.jpg" alt="레몬 호버">
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#section1">
+                        <img src="./images/mango.png" alt="mango" class="fruit-icon">
+                        <span class="fruit-hover">
+                            <img src="./images/mango_hover.jpg" alt="망고 호버">
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#section1">
+                        <img src="./images/melon.png" alt="melon" class="fruit-icon">
+                        <span class="fruit-hover">
+                            <img src="./images/melon_hover.jpg" alt="멜론 호버">
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#section1">
+                        <img src="./images/shinemuscat.png" alt="shinemuscat" class="fruit-icon">
+                        <span class="fruit-hover">
+                            <img src="./images/shinemuscat_hover.jpg" alt="샤인머스켓 호버">
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#section1">
+                        <img src="./images/cherry.png" alt="cherry" class="fruit-icon">
+                        <span class="fruit-hover">
+                            <img src="./images/cherry_hover.jpg" alt="체리 호버">
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div id="section2">
+            <h1>WELCOME TO FRUTA</h1>
+
+            <p class="intro-text">
+                1979년, 작은 과일 노점에서 시작된 이야기가 있습니다. <br>
+                매일 아침 가장 신선한 과일을 골라 담던 손길, 그 손길에서 시작된 마음이 FRUTA의 전부입니다.
+            </p>
+
+            <p class="intro-text">
+                우리는 화려한 것보다 정직한 것을, 빠른 것보다 제대로 된 것을 선택해왔습니다. <br>
+                산지에서 딴 그 순간의 싱그러움을 그대로, 가장 빠른 걸음으로 당신에게 전달하는 것. <br>
+                그것이 지금까지도 변하지 않는 FRUTA의 약속입니다.
+            </p>
+
+            <p class="intro-text">
+                FRESH. SWEET. HEALTHY. <br>
+                세 가지 마음을 품고, FRUTA는 오늘도 문을 엽니다.
+            </p>
+
+            <a href="#section2" class="btn-story">OUR STORY
+                <img src="./images/arrow_story.png" alt="화살표" class="btn-arrow">
+            </a>
+        </div>
+
+        <div id="section3">
+            <h1>1인 가구 패키지</h1>
+
+            <div class="swiper package-slider">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                        <a href="./product_page.html">
+                            <img src="./images/strawberry_package.jpg" alt="딸기패키지">
+                        </a>
+                        <p class="fruit_package"><a href="./product_page.html">STRAWBERRY</a></p>
+                        <p class="origin"><a href="./product_page.html">국내산 (500g)</a></p>
+                        <P class="price"><a href="./product_page.html">13,900원</a></P>
+
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="./product_page.html">
+                            <img src="./images/cherry_package.jpg" alt="체리패키지">
+                        </a>
+                        <p class="fruit_package"><a href="./product_page.html">CHERRY</a></p>
+                        <p class="origin"><a href="./product_page.html">수입산 (500g)</a></p>
+                        <P class="price"><a href="./product_page.html">15,900원</a></P>
+
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="./product_page.html">
+                            <img src="./images/melon_package.jpg" alt="멜론패키지">
+                        </a>
+                        <p class="fruit_package"><a href="./product_page.html">MELON</a></p>
+                        <p class="origin"><a href="./product_page.html">국내산 (500g)</a></p>
+                        <P class="price"><a href="./product_page.html">9,900원</a></P>
+
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="./product_page.html">
+                            <img src="./images/shinemuscat_package.jpg" alt="샤인머스켓패키지">
+                        </a>
+                        <p class="fruit_package"><a href="./product_page.html">SHINE MUSCAT</a></p>
+                        <p class="origin"><a href="./product_page.html">국내산 (500g)</a></p>
+                        <P class="price"><a href="./product_page.html">11,900원</a></P>
+
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="./product_page.html">
+                            <img src="./images/mango_package.jpg" alt="망고패키지">
+                        </a>
+                        <p class="fruit_package"><a href="./product_page.html">MANGO</a></p>
+                        <p class="origin"><a href="./product_page.html">수입산 (500g)</a></p>
+                        <P class="price"><a href="./product_page.html">10,900원</a></P>
+                    </li>
+
+                    <li class="swiper-slide">
+                        <a href="./product_page.html">
+                            <img src="./images/lemon_package.jpg" alt="레몬패키지">
+                        </a>
+                        <p class="fruit_package"><a href="./product_page.html">LEMON</a></p>
+                        <p class="origin"><a href="./product_page.html">수입산 (500g)</a></p>
+                        <P class="price"><a href="./product_page.html">5,900원</a></P>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 하단 캐릭터 컨베이어 벨트 -->
+        <div class="char-conveyor">
+            <div class="char-track">
+                <img src="./images/strawberry_mascot.png" alt="딸기">
+                <img src="./images/cherry_mascot.png" alt="체리">
+                <img src="./images/melon_mascot.png" alt="멜론">
+                <img src="./images/shinemuscat_mascot.png" alt="샤인머스켓">
+                <img src="./images/lemon_mascot.png" alt="레몬">
+                <img src="./images/mango_mascot.png" alt="망고">
+
+                <!-- 무한 루프용 동일 세트 반복 -->
+                <img src="./images/strawberry_mascot.png" alt="딸기">
+                <img src="./images/cherry_mascot.png" alt="체리">
+                <img src="./images/melon_mascot.png" alt="멜론">
+                <img src="./images/shinemuscat_mascot.png" alt="샤인머스켓">
+                <img src="./images/lemon_mascot.png" alt="레몬">
+                <img src="./images/mango_mascot.png" alt="망고">
+
+                <!-- 무한 루프용 동일 세트 반복 -->
+                <img src="./images/strawberry_mascot.png" alt="딸기">
+                <img src="./images/cherry_mascot.png" alt="체리">
+                <img src="./images/melon_mascot.png" alt="멜론">
+                <img src="./images/shinemuscat_mascot.png" alt="샤인머스켓">
+                <img src="./images/lemon_mascot.png" alt="레몬">
+                <img src="./images/mango_mascot.png" alt="망고">
+
+                <!-- 무한 루프용 동일 세트 반복 -->
+                <img src="./images/strawberry_mascot.png" alt="딸기">
+                <img src="./images/cherry_mascot.png" alt="체리">
+                <img src="./images/melon_mascot.png" alt="멜론">
+                <img src="./images/shinemuscat_mascot.png" alt="샤인머스켓">
+                <img src="./images/lemon_mascot.png" alt="레몬">
+                <img src="./images/mango_mascot.png" alt="망고">
+
+                <!-- 무한 루프용 동일 세트 반복 -->
+                <img src="./images/strawberry_mascot.png" alt="딸기">
+                <img src="./images/cherry_mascot.png" alt="체리">
+                <img src="./images/melon_mascot.png" alt="멜론">
+                <img src="./images/shinemuscat_mascot.png" alt="샤인머스켓">
+                <img src="./images/lemon_mascot.png" alt="레몬">
+                <img src="./images/mango_mascot.png" alt="망고">
+
+                <!-- 무한 루프용 동일 세트 반복 -->
+                <img src="./images/strawberry_mascot.png" alt="딸기">
+                <img src="./images/cherry_mascot.png" alt="체리">
+                <img src="./images/melon_mascot.png" alt="멜론">
+                <img src="./images/shinemuscat_mascot.png" alt="샤인머스켓">
+                <img src="./images/lemon_mascot.png" alt="레몬">
+                <img src="./images/mango_mascot.png" alt="망고">
+
+                <!-- 무한 루프용 동일 세트 반복 -->
+                <img src="./images/strawberry_mascot.png" alt="딸기">
+                <img src="./images/cherry_mascot.png" alt="체리">
+                <img src="./images/melon_mascot.png" alt="멜론">
+                <img src="./images/shinemuscat_mascot.png" alt="샤인머스켓">
+                <img src="./images/lemon_mascot.png" alt="레몬">
+                <img src="./images/mango_mascot.png" alt="망고">
+
+                <!-- 무한 루프용 동일 세트 반복 -->
+                <img src="./images/strawberry_mascot.png" alt="딸기">
+                <img src="./images/cherry_mascot.png" alt="체리">
+                <img src="./images/melon_mascot.png" alt="멜론">
+                <img src="./images/shinemuscat_mascot.png" alt="샤인머스켓">
+                <img src="./images/lemon_mascot.png" alt="레몬">
+                <img src="./images/mango_mascot.png" alt="망고">
+            </div>
+        </div>
+
+        <div id="section4">
+            <h1>선물 세트</h1>
+
+            <div class="swiper gift-slider">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                        <a href="#section4">
+                            <img src="./images/gift_box.png" alt="선물상자" class="gift-box">
+                            <span class="gift-hover">
+                                <img src="./images/gift_small.jpg" alt="스몰상자">
+                            </span>
+                        </a>
+                        <p class="fruit_gift"><a href="#section4">SMALL</a></p>
+                        <p class="type"><a href="#section4">샤인머스켓/딸기/체리/레몬</a></p>
+                        <P class="gift_price"><a href="#section4">32,000원</a></P>
+                    </li>
+
+                    <li class="swiper-slide">
+                        <a href="#section4">
+                            <img src="./images/gift_box.png" alt="선물상자" class="gift-box">
+                            <span class="gift-hover">
+                                <img src="./images/gift_medium.jpg" alt="미디움상자">
+                            </span>
+                        </a>
+                        <p class="fruit_gift"><a href="#section4">MEDIUM</a></p>
+                        <p class="type"><a href="#section4">샤인머스켓/딸기/멜론/망고</a></p>
+                        <P class="gift_price"><a href="#section4">55,000원</a></P>
+                    </li>
+
+                    <li class="swiper-slide">
+                        <a href="#section4">
+                            <img src="./images/gift_box.png" alt="선물상자" class="gift-box">
+                            <span class="gift-hover">
+                                <img src="./images/gift_large.jpg" alt="라지상자">
+                            </span>
+                        </a>
+                        <p class="fruit_gift"><a href="#section4">LARGE</a></p>
+                        <p class="type"><a href="#section4">샤인머스켓/딸기/체리/레몬/멜론/망고</a></p>
+                        <P class="gift_price"><a href="#section4">89,000원</a></P>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="section5" class="delivery-banner">
+            <a href="#section5">
+                <img src="./images/delivery.jpg" alt="배송 트럭" class="delivery-img">
+                <div class="delivery-overlay"></div>
+                <div class="delivery-text">
+                    <p class="delivery-main">신선&#38;새벽 배송</p>
+                    <p class="delivery-sub">밤 11시 전 주문, 오전 7시 도착 보장</p>
+                </div>
+            </a>
+        </div>
+
+        <div id="section6">
+
+            <h2 class="goods-title">FRESH &amp; SWEET</h2>
+            <p class="goods-label">프루타 굿즈</p>
+
+            <div class="swiper goods-slider">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                        <img src="./images/red_cup.png" alt="체리 머그컵">
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="./images/green_cup.png" alt="샤인머스켓 머그컵">
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="./images/yellow_cup.png" alt="망고 머그컵">
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="./images/glass_cup.png" alt="유리컵">
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="./images/strawberry_coaster.png" alt="딸기 코스터">
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="./images/cherry_coaster.png" alt="체리 코스터">
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="./images/melon_coaster.png" alt="멜론 코스터">
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="./images/shinemuscat_coaster.png" alt="샤인머스켓 코스터">
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="./images/mango_coaster.png" alt="망고 코스터">
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="./images/lemon_coaster.png" alt="레몬 코스터">
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="./images/fruit_keyring.png" alt="과일 키링">
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="./images/strawberry_keyring.png" alt="딸기 키링">
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="./images/lemon_keyring.png" alt="레몬 키링">
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="./images/melon_keyring.png" alt="멜론 키링">
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="./images/logo_keyring.png" alt="로고 키링">
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="./images/note.png" alt="노트">
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 무한 마퀴 1행 -->
+            <div class="marquee n1">
+                <div class="marquee-track">
+                    <div class="txt">
+                        <strong>FRESH FRUIT.</strong>
+                        <span>HAPPY DAYS!</span>
+                    </div>
+                    <div class="txt">
+                        <strong>FRESH FRUIT.</strong>
+                        <span>HAPPY DAYS!</span>
+                    </div>
+                    <div class="txt">
+                        <strong>FRESH FRUIT.</strong>
+                        <span>HAPPY DAYS!</span>
+                    </div>
+                    <div class="txt">
+                        <strong>FRESH FRUIT.</strong>
+                        <span>HAPPY DAYS!</span>
+                    </div>
+                    <div class="txt">
+                        <strong>FRESH FRUIT.</strong>
+                        <span>HAPPY DAYS!</span>
+                    </div>
+                    <div class="txt">
+                        <strong>FRESH FRUIT.</strong>
+                        <span>HAPPY DAYS!</span>
+                    </div>
+                    <div class="txt">
+                        <strong>FRESH FRUIT.</strong>
+                        <span>HAPPY DAYS!</span>
+                    </div>
+                    <div class="txt">
+                        <strong>FRESH FRUIT.</strong>
+                        <span>HAPPY DAYS!</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 무한 마퀴 2행 (반대 방향) -->
+            <div class="marquee n2">
+                <div class="marquee-track">
+                    <div class="txt">
+                        <span>HAPPY DAYS!</span>
+                        <strong>FRESH FRUIT.</strong>
+                    </div>
+                    <div class="txt">
+                        <span>HAPPY DAYS!</span>
+                        <strong>FRESH FRUIT.</strong>
+                    </div>
+                    <div class="txt">
+                        <span>HAPPY DAYS!</span>
+                        <strong>FRESH FRUIT.</strong>
+                    </div>
+                    <div class="txt">
+                        <span>HAPPY DAYS!</span>
+                        <strong>FRESH FRUIT.</strong>
+                    </div>
+                    <div class="txt">
+                        <span>HAPPY DAYS!</span>
+                        <strong>FRESH FRUIT.</strong>
+                    </div>
+                    <div class="txt">
+                        <span>HAPPY DAYS!</span>
+                        <strong>FRESH FRUIT.</strong>
+                    </div>
+                    <div class="txt">
+                        <span>HAPPY DAYS!</span>
+                        <strong>FRESH FRUIT.</strong>
+                    </div>
+                    <div class="txt">
+                        <span>HAPPY DAYS!</span>
+                        <strong>FRESH FRUIT.</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="section7">
+            <h2 class="follow-title">FOLLOW THE FRESH.</h2>
+            <p class="follow-sub">FRESH FRUITS, SWEET MOMENTS, SHARED EVERY DAY.</p>
+            <p class="follow-handle">@fruta.official</p>
+
+            <ul class="follow-grid">
+                <li>
+                    <a href="#section7">
+                        <img src="./images/sns01.jpg" alt="sns01">
+                    </a>
+                    <p class="follow-caption">today's picks.
+                        <br>
+                        see you at fruta.
+                    </p>
+                    <p class="follow-like">
+                        <img src="./images/heart.png" alt="좋아요" class="heart-icon">
+                        <span>102</span>
+                    </p>
+                </li>
+
+                <li>
+                    <a href="#section7">
+                        <video src="./videos/fruta_shorts01.mp4" muted loop playsinline autoplay></video>
+                    </a>
+                    <p class="follow-caption">freshly squeezed.</p>
+                    <p class="follow-like">
+                        <img src="./images/heart.png" alt="좋아요" class="heart-icon">
+                        <span>88</span>
+                    </p>
+                </li>
+
+                <li>
+                    <a href="#section7">
+                        <video src="./videos/fruta_shorts02.mp4" muted loop playsinline autoplay></video>
+                    </a>
+                    <p class="follow-caption">Fresh, Every Moment.</p>
+                    <p class="follow-like">
+                        <img src="./images/heart.png" alt="좋아요" class="heart-icon">
+                        <span>72</span>
+                    </p>
+                </li>
+
+                <li>
+                    <a href="#section7">
+                        <img src="./images/sns04.jpg" alt="sns04">
+                    </a>
+                    <p class="follow-caption">just lemons.
+                        <br>
+                        simple is always sweet.
+                    </p>
+                    <p class="follow-like">
+                        <img src="./images/heart.png" alt="좋아요" class="heart-icon">
+                        <span>23</span>
+                    </p>
+                </li>
+            </ul>
+        </div>
+
+        <div id="section8">
+            <div class="section8-inner">
+                <div class="store-text">
+                    <h2 class="store-title">매장 안내</h2>
+
+                    <div class="store-bottom">
+                        <p class="store-sub">가장 신선한 과일을<br>직접 만나보세요.</p>
+                        <a href="#section8" class="store-link">
+                            매장 바로가기
+                            <img src="./images/arrow_store.png" alt="화살표" class="store-arrow">
+                        </a>
+                    </div>
+                </div>
+
+                <a href="#section8" class="store-image-wrap">
+                    <img src="./images/store01.jpg" alt="FRUTA 매장 외관" class="store-image">
+                    <div class="store-overlay"></div>
+                </a>
+            </div>
+        </div>
+
+        <a href="#" class="top-btn">
+            <img src="./images/top_btn.svg" alt="맨 위로">
+        </a>
+
+        <footer id="footer">
+            <div class="footer-inner">
+
+                <!-- PC / 태블릿 왼쪽 로고 -->
+                <div class="footer-logo footer-logo-pc">
+                    <a href="#">
+                        <img src="./images/logo.svg" alt="로고">
+                    </a>
+                </div>
+
+                <!-- 오른쪽 정보 영역 -->
+                <div class="footer-content">
+
+                    <ul class="footer-menu">
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">이용안내</a></li>
+                    </ul>
+
+                    <div class="footer-bottom">
+                        <div class="footer-info">
+                            <p>(주)프루타</p>
+                            <p>대표: 김가연</p>
+                            <p>주소: 부산광역시 수영구</p>
+                            <p>사업자등록번호: 111-11-11111</p>
+                            <p>통신판매업신고: 제 2026-부산수영구-1111호</p>
+                            <p>대표번호: 1111-1111</p>
+                            <p>이메일: info@fruta.com</p>
+                            <p>개인정보보호관리 책임자: 김가연</p>
+                        </div>
+
+                        <!-- 모바일에서 보이는 로고와 SNS -->
+                        <div class="footer-mobile-side">
+                            <div class="footer-logo footer-logo-mobile">
+                                <a href="#">
+                                    <img src="./images/logo.svg" alt="로고">
+                                </a>
+                            </div>
+
+                            <ul class="footer-sns">
+                                <li>
+                                    <a href="#">
+                                        <img src="./images/kakao.png" alt="카카오톡">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="./images/instagram.png" alt="인스타그램">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="./images/youtube.png" alt="유튜브">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="./images/facebook.png" alt="페이스북">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checker-strip"></div>
+        </footer>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <script src="./js/script.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        // 1인 가구 패키지 슬라이더
+        new Swiper('.package-slider', {
+            slidesPerView: 1,        // 기본값(모바일, 601px 미만)
+            spaceBetween: 12,
+            grabCursor: true,
+            freeMode: true,
+            freeModeMomentum: true,
+            breakpoints: {
+                601: {                  // 화면 폭 601px 이상부터 (태블릿+PC)
+                    slidesPerView: 5,
+                    spaceBetween: 20,
+                },
+            },
+        });
+
+        // 선물 세트 슬라이더
+        new Swiper('.gift-slider', {
+            slidesPerView: 1,          // 기본값 = 모바일(601px 미만): 1개만 보이고 드래그
+            spaceBetween: 16,
+            grabCursor: true,
+            freeMode: true,
+            freeModeMomentum: true,
+            breakpoints: {
+                601: {                    // 601px 이상(태블릿+PC): 3개 다 보이고 드래그 불필요
+                    slidesPerView: 3,
+                    spaceBetween: 32,
+                    allowTouchMove: false,  // 3개가 다 보이니 드래그 자체를 막음
+                    freeMode: false,
+                },
+            },
+        });
+
+        // 굿즈 슬라이더: PC/태블릿(601px 이상)엔 6개씩 보이고, 모바일(601px 미만)엔 3개씩 보임
+        new Swiper('.goods-slider', {
+            slidesPerView: 3,      // 기본값 = 모바일(601px 미만)
+            spaceBetween: 10,
+            grabCursor: true,
+            freeMode: true,
+            freeModeMomentum: true,
+            breakpoints: {
+                601: {               // 601px 이상 (태블릿+PC)
+                    slidesPerView: 6,
+                    spaceBetween: 16,
+                },
+            },
+        });
+    </script>
+</body>
+
+</html>

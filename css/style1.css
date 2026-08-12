@@ -1,0 +1,1104 @@
+@charset "UTF-8";
+
+/* font */
+@import url('https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css');
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #1C1C1C;
+    /* min-width: 1320px; */
+    background-color: #FEFBF4;
+    cursor: url(../images/cursor01.png), auto;
+    padding-top: 90px;
+}
+
+/* 클릭 가능한 곳 */
+a:hover,
+button:hover,
+img:hover,
+.swiper-slide:hover,
+select:hover {
+    cursor: url(../images/cursor02.png), pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* header */
+/* header {
+    width: 100%;
+    background-color: #FEFBF4;
+    display: flex;
+    justify-content: center;
+    height: 90px;
+}
+
+.logo {
+    width: 140px;
+} */
+
+
+.top {
+    height: 90px;
+    background-color: #FEFBF4;
+    padding: 0 24px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+    transform: translateY(0);
+    transition: transform 0.35s ease;
+}
+
+/* 아래로 스크롤할 때 헤더 숨김 */
+.top.header-hidden {
+    transform: translateY(-100%);
+}
+
+.gnb {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    /* 왼쪽 유동 / 가운데 고정폭 / 오른쪽 유동 */
+    align-items: center;
+    height: 100%;
+}
+
+/* ---------- 왼쪽: menu ---------- */
+.menu {
+    justify-self: start;
+    /* 1번째 칸 안에서 왼쪽 정렬 */
+    padding-left: 160px;
+}
+
+.menu a {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #1C1C1C;
+}
+
+.menu img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+/* ---------- 가운데: 로고 ---------- */
+.logo {
+    justify-self: center;
+    /* 가운데(auto) 칸에서 정확히 중앙 고정 */
+}
+
+.logo img {
+    width: 140px;
+    /* 로고 원본 비율 봐가며 조정 */
+    height: auto;
+}
+
+/* ---------- 오른쪽: 아이콘 3개 ---------- */
+.header-icons {
+    justify-self: end;
+    /* 3번째 칸에서 오른쪽 정렬 */
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    padding-right: 160px;
+}
+
+.header-icons img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+
+/* ==========================================================
+   TABLET (max-width: 1500px)
+   - 헤더 높이, 여백 축소
+   - 로고 살짝 축소
+========================================================== */
+@media (max-width: 1500px) {
+    #wrap {
+        padding-top: 72px;
+    }
+
+    .top {
+        height: 72px;
+        padding: 0 20px;
+    }
+
+    .logo img {
+        width: 84px;
+    }
+
+    .header-icons {
+        gap: 14px;
+        padding-right: 40px;
+    }
+
+    .header-icons img {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* menu 텍스트 숨기고 아이콘만 남김 (태블릿부터 적용) */
+    .menu a {
+        font-size: 0;
+        gap: 0;
+    }
+
+    .menu img {
+        width: 22px;
+        height: 22px;
+    }
+
+    .menu {
+        padding-left: 40px;
+    }
+}
+
+
+/* ==========================================================
+   MOBILE (max-width: 600px)
+   - "menu" 텍스트 숨기고 햄버거 아이콘만
+   - 로고 더 축소
+========================================================== */
+@media (max-width: 600px) {
+    #wrap {
+        padding-top: 56px;
+    }
+
+    .top {
+        height: 56px;
+        padding: 0 16px;
+    }
+
+    .logo img {
+        width: 68px;
+    }
+
+    .header-icons {
+        gap: 10px;
+        padding-right: 16px;
+    }
+
+    .header-icons img {
+        width: 16px;
+        height: 16px;
+    }
+
+    .menu {
+        padding-left: 16px;
+    }
+}
+
+
+
+/* ==========================================================
+   SIDE MENU
+========================================================== */
+
+/* 기존 메뉴 버튼 */
+.menu-open {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    padding: 0;
+    border: 0;
+    background: transparent;
+
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #1c1c1c;
+}
+
+.menu-open img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+/* 화면을 덮는 반투명 배경 */
+.menu-dim {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+        opacity 0.35s ease,
+        visibility 0.35s ease;
+}
+
+/* 왼쪽에서 나오는 메뉴 */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+
+    width: 520px;
+    max-width: 88vw;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 38px 48px 42px;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #FEFBF4;
+
+    transform: translateX(-100%);
+    visibility: hidden;
+
+    transition:
+        transform 0.45s cubic-bezier(0.77, 0, 0.18, 1),
+        visibility 0.45s;
+}
+
+/* 메뉴가 열린 상태 */
+body.menu-active .side-menu {
+    transform: translateX(0);
+    visibility: visible;
+}
+
+body.menu-active .menu-dim {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+body.menu-active {
+    overflow: hidden;
+}
+
+/* 메뉴 상단 */
+.side-menu-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.side-logo img {
+    width: 130px;
+    height: auto;
+}
+
+/* X 닫기 버튼 */
+.menu-close {
+    position: relative;
+
+    width: 40px;
+    height: 40px;
+
+    padding: 0;
+    border: 0;
+    background: transparent;
+}
+
+.menu-close span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 30px;
+    height: 2px;
+
+    background: #d94f2a;
+}
+
+.menu-close span:first-child {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.menu-close span:last-child {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* 메뉴 목록 */
+.side-nav {
+    margin-top: 80px;
+}
+
+.side-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.side-nav li {
+    overflow: hidden;
+}
+
+.side-nav a {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+
+    font-family: "Bowlby One SC", sans-serif;
+    font-size: 40px;
+    line-height: 1.25;
+    color: #d94f2a;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.side-nav a:hover {
+    color: #f2b441;
+    transform: translateX(10px);
+}
+
+.side-number {
+    width: 22px;
+    flex-shrink: 0;
+
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+/* 메뉴 하단 */
+.side-menu-foot {
+    margin-top: auto;
+    padding-top: 24px;
+    border-top: 1px solid rgba(217, 79, 42, 0.45);
+}
+
+.side-menu-foot>p {
+    font-family: "Bowlby One SC", sans-serif;
+    font-size: 13px;
+    color: #d94f2a;
+}
+
+.side-menu-links {
+    display: flex;
+    gap: 18px;
+    margin-top: 10px;
+}
+
+.side-menu-links a {
+    font-size: 11px;
+    font-weight: 700;
+    color: #1c1c1c;
+}
+
+
+/* 태블릿 */
+@media (max-width: 1500px) {
+    .menu-open {
+        font-size: 0;
+        gap: 0;
+    }
+
+    .menu-open img {
+        width: 22px;
+        height: 22px;
+    }
+
+    .side-menu {
+        width: 430px;
+        padding: 30px 36px 36px;
+    }
+
+    .side-logo img {
+        width: 105px;
+    }
+
+    .side-nav {
+        margin-top: 62px;
+    }
+
+    .side-nav a {
+        font-size: 32px;
+    }
+}
+
+
+/* 모바일 */
+@media (max-width: 600px) {
+    .side-menu {
+        width: 88vw;
+        max-width: none;
+        padding: 24px 24px 30px;
+    }
+
+    .side-logo img {
+        width: 88px;
+    }
+
+    .menu-close {
+        width: 34px;
+        height: 34px;
+    }
+
+    .menu-close span {
+        width: 24px;
+    }
+
+    .side-nav {
+        margin-top: 48px;
+    }
+
+    .side-nav ul {
+        gap: 12px;
+    }
+
+    .side-nav a {
+        gap: 10px;
+        font-size: 25px;
+    }
+
+    .side-number {
+        width: 18px;
+        font-size: 9px;
+    }
+
+    .side-menu-foot>p {
+        font-size: 10px;
+    }
+
+    .side-menu-links a {
+        font-size: 9px;
+    }
+
+    .menu-open img {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+
+/* 중앙 전체 */
+.wrap {
+    width: 1320px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #FEFBF4;
+}
+
+
+/* 상품 주문창 */
+#product {
+    width: 400px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+.product-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.right h1 {
+    font-family: "Black Han Sans", sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    letter-spacing: 0.5px;
+}
+
+.right h2 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 30px;
+}
+
+.right h3 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 30px;
+}
+
+.right dl {
+    margin: 10px 5px;
+}
+
+.right dt {
+    padding-bottom: 5px;
+}
+
+.border {
+    border-bottom: 1.5px solid #1C1C1C;
+    padding-bottom: 20px;
+}
+
+.selectbox {
+    margin: 20px 0;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.selectbox th {
+    text-align: left;
+    font-weight: 400;
+}
+
+.selectbox th,
+.selectbox td {
+    padding: 10px 0;
+}
+
+.selectbox select {
+    outline: none;
+    width: 100%;
+    padding: 10px;
+
+    box-sizing: border-box;
+    border: 1px solid #8c8c8c;
+    background-color: #fff;
+}
+
+.order {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.order li {
+    flex: 1;
+    text-align: center;
+}
+
+.order li a {
+    border: 1px #1C1C1C solid;
+    color: #1C1C1C;
+    display: block;
+    padding: 20px 0;
+    background-color: #fff;
+}
+
+.order li:nth-child(2) a {
+    background-color: #1C1C1C;
+    color: #fff;
+}
+
+.order li a:hover {
+    background-color: rgba(19, 19, 22, 0.5);
+    color: #fff;
+}
+
+
+/* 상세페이지 */
+.detail_wrap {
+    width: 860px;
+}
+
+.main img {
+    display: block;
+    width: 100%;
+}
+
+
+/* 제품 정보 */
+.info {
+    padding: 20px 20px 0;
+}
+
+.info h1 {
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.info h2 {
+    font-weight: 500;
+    font-size: 20px;
+    padding: 35px 0 8px;
+    border-bottom: 1px solid #131316bf;
+    margin-bottom: 14px;
+}
+
+.info ol {
+    list-style: decimal inside;
+}
+
+.info .ol_in {
+    padding-left: 20px;
+    list-style: circle inside;
+}
+
+
+/* =========================
+   TABLET
+   PC 구조 최대한 유지
+========================= */
+
+@media (max-width: 1500px) {
+
+    body {
+        padding-top: 72px;
+    }
+
+    .wrap {
+        width: calc(100% - 40px);
+        max-width: 1320px;
+        margin: 0 auto;
+
+        display: grid;
+        grid-template-columns: 32fr 68fr;
+        gap: 24px;
+
+        align-items: start;
+        box-sizing: border-box;
+    }
+
+    #product {
+        width: 100%;
+        min-width: 0;
+
+        position: sticky;
+        top: 72px;
+    }
+
+    .detail_wrap {
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+    }
+
+    .main img {
+        width: 100%;
+        height: auto;
+    }
+
+    .right h1 {
+        font-size: 30px;
+    }
+
+    .right p {
+        font-size: 14px;
+    }
+
+    .selectbox select {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    body {
+        padding-top: 56px;
+    }
+
+    .wrap {
+        width: 100%;
+        padding: 0 16px;
+        box-sizing: border-box;
+
+        display: block;
+    }
+
+    #product {
+        width: 100%;
+        position: static;
+        margin-bottom: 40px;
+    }
+
+    .detail_wrap {
+        width: 100%;
+        max-width: none;
+    }
+
+    .right h1 {
+        font-size: 26px;
+        line-height: 1.25;
+    }
+
+    .right p {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .selectbox th {
+        width: 78px;
+    }
+
+    .order li a {
+        padding: 16px 0;
+    }
+}
+
+
+/* footer */
+/* ==========================================================
+   FOOTER
+========================================================== */
+#footer {
+    width: 100%;
+    background: #FEFBF4;
+    color: #1c1c1c;
+}
+
+.footer-inner {
+    width: 100%;
+    max-width: 1440px;
+    min-height: 410px;
+    margin: 0 auto;
+    padding: 70px 80px 55px;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 120px;
+}
+
+/* 왼쪽 로고 */
+.footer-logo-pc {
+    flex: 0 0 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo-pc img {
+    width: 220px;
+    height: auto;
+}
+
+/* 오른쪽 전체 영역 */
+.footer-content {
+    flex: 1;
+    max-width: 640px;
+}
+
+/* 상단 메뉴 */
+.footer-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 48px;
+    margin-bottom: 38px;
+}
+
+.footer-menu li {
+    white-space: nowrap;
+}
+
+.footer-menu a {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #1c1c1c;
+}
+
+/* 하단 정보 + SNS */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 50px;
+}
+
+.footer-info {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+.footer-info p:first-child {
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+/* SNS */
+.footer-sns {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 4px;
+}
+
+.footer-sns li a {
+    display: block;
+}
+
+.footer-sns img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    opacity: 0.65;
+    transition: opacity 0.2s ease;
+}
+
+.footer-sns a:hover img {
+    opacity: 1;
+}
+
+/* 모바일 전용 로고는 PC에서 숨김 */
+.footer-logo-mobile {
+    display: none;
+}
+
+.checker-strip {
+    height: 60px;
+    background-image: url(../images/checker_strip.svg);
+    background-repeat: repeat-x;
+    background-size: 60px 60px;
+    animation: checker-scroll 3s linear infinite;
+}
+
+@keyframes checker-scroll {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 60px 0;
+    }
+}
+
+/* ==========================================================
+   TABLET
+========================================================== */
+@media (max-width: 1500px) {
+
+    .footer-inner {
+        min-height: 290px;
+        padding: 45px 40px 40px;
+        gap: 40px;
+    }
+
+    .footer-logo-pc {
+        flex: 0 1 220px;
+        min-width: 0;
+    }
+
+    .footer-logo-pc img {
+        width: 150px;
+    }
+
+    .footer-content {
+        flex: 1;
+        max-width: 560px;
+        min-width: 0;
+    }
+
+    .footer-menu {
+        gap: 20px;
+        margin-bottom: 28px;
+        flex-wrap: wrap;
+    }
+
+    .footer-menu a {
+        font-size: 12px;
+    }
+
+    .footer-info {
+        font-size: 11px;
+        line-height: 1.55;
+    }
+
+    .footer-sns {
+        gap: 12px;
+        flex-shrink: 0;
+    }
+
+    .footer-sns img {
+        width: 18px;
+        height: 18px;
+    }
+
+    .checker-strip {
+        height: 44px;
+        background-size: 44px 44px;
+        animation-duration: 2.4s;
+    }
+}
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+@media (max-width: 600px) {
+    .footer-inner {
+        min-height: auto;
+        padding: 48px 28px 54px;
+        display: block;
+    }
+
+    /* PC용 왼쪽 로고 숨김 */
+    .footer-logo-pc {
+        display: none;
+    }
+
+    .footer-content {
+        width: 100%;
+        max-width: none;
+    }
+
+    /* 모바일 상단 메뉴 */
+    .footer-menu {
+        width: 100%;
+        justify-content: space-between;
+        gap: 0;
+        margin-bottom: 42px;
+    }
+
+    .footer-menu a {
+        font-size: 10px;
+    }
+
+    /* 모바일 하단 구조 */
+    .footer-bottom {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .footer-info {
+        flex: 1;
+        font-size: 10px;
+        line-height: 1.75;
+    }
+
+    .footer-mobile-side {
+        flex: 0 0 145px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 4px;
+    }
+
+    /* 모바일 전용 로고 표시 */
+    .footer-logo-mobile {
+        display: block;
+        margin-bottom: 18px;
+    }
+
+    .footer-logo-mobile img {
+        width: 105px;
+        height: auto;
+    }
+
+    .footer-sns {
+        width: 100%;
+        justify-content: center;
+        gap: 16px;
+        padding: 0;
+    }
+
+    .footer-sns img {
+        width: 18px;
+        height: 18px;
+    }
+
+    .footer-checker {
+        height: 60px;
+        background-size: 60px 60px;
+    }
+
+    .checker-strip {
+        height: 28px;
+        background-size: 28px 28px;
+        animation-duration: 1.8s;
+    }
+
+    @keyframes checker-scroll {
+        from {
+            background-position: 0 0;
+        }
+
+        to {
+            background-position: 28px 0;
+        }
+
+        /* 타일 크기(28px)와 반드시 일치 */
+    }
+}
+
+
+/* =========================
+   탑 버튼
+========================= */
+
+.top_btn {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+
+    width: 72px;
+    height: 72px;
+
+    z-index: 999;
+
+    /* 처음에는 숨김 */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+
+    transition: opacity 0.3s ease,
+        visibility 0.3s ease,
+        transform 0.3s ease;
+}
+
+.top_btn img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* 스크롤 내리면 JS가 show 클래스 추가 */
+.top_btn.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* 마우스 올리면 살짝 위로 */
+.top_btn.show:hover {
+    transform: translateY(-8px);
+}
+
+
+/* 모바일 */
+@media (max-width: 600px) {
+
+    .top_btn {
+        width: 56px;
+        height: 56px;
+
+        right: 16px;
+        bottom: 16px;
+    }
+
+}
